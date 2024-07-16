@@ -1,0 +1,34 @@
+.message {
+  --message-border-radius: 6px;
+  --message-padding-inline: 12px;
+  --message-padding-block: 8px;
+  --message-icon-margin-inline: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--message-padding-block) var(--message-padding-inline);
+  border-radius: var(--message-border-radius);
+  position: relative;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: rgb(var(--color-surface));
+  box-shadow: var(--shadow-10);
+}
+.message .message-content {
+  display: flex;
+  align-items: center;
+}
+.message .message-icon,
+.message.message-info .message-icon {
+  margin-inline-end: var(--message-icon-margin-inline);
+  color: rgb(var(--color-info-text));
+}
+
+.message.message-success .message-icon {
+  color: rgb(var(--color-success-text));
+}
+.message.message-danger .message-icon {
+  color: rgb(var(--color-danger-text));
+}
+.message.message-warning .message-icon {
+  color: rgb(var(--color-warning-text));
+}

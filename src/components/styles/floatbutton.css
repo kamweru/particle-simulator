@@ -1,0 +1,37 @@
+.floatbutton {
+  --floatbutton-bottom-position: 48px;
+  --floatbutton-right-position: 32px;
+  --floatbutton-width: 40px;
+  --floatbutton-square-border-radius: 8px;
+  --floatbutton-icon-font-size: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+  z-index: 99;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  bottom: var(--floatbutton-bottom-position);
+  right: var(--floatbutton-right-position);
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-text));
+  box-shadow: var(--shadow-secondary);
+  width: var(--floatbutton-width);
+  height: var(--floatbutton-width);
+}
+.floatbutton,
+.floatbutton.floatbutton-square {
+  border-radius: var(--floatbutton-square-border-radius);
+}
+.floatbutton.floatbutton-circle {
+  border-radius: 50%;
+}
+.floatbutton .floatbutton-icon {
+  font-size: var(--floatbutton-icon-font-size);
+  line-height: 1;
+}

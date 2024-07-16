@@ -1,0 +1,53 @@
+.notification {
+  --notification-padding-inline: 16px;
+  --notification-padding-block: 12px;
+  --notification-border-radius: 8px;
+  --notification-icon-font-size: 24px;
+  --notification-icon-margin-inline-end: 12px;
+  --notification-close-button-padding: 3px;
+  --notification-close-button-border-radius: 4px;
+  display: flex;
+  align-items: start;
+  padding: var(--notification-padding-block) var(--notification-padding-inline);
+  border-radius: var(--notification-border-radius);
+  position: relative;
+  background-color: rgb(var(--color-surface));
+  box-shadow: var(--shadow-10);
+  word-wrap: break-word;
+}
+.notification .notification-icon {
+  flex: none;
+  margin-inline-end: var(--notification-icon-margin-inline-end);
+  font-size: var(--notification-icon-font-size);
+  line-height: 1;
+}
+.notification .notification-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.notification .notification-content .notification-title {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+.notification .notification-close-btn {
+  flex: none;
+  margin-inline-start: var(--margin-xs);
+  padding: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  padding: var(--notification-close-button-padding);
+  border-radius: var(--notification-close-button-border-radius);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.notification .notification-close-btn:hover {
+  cursor: pointer;
+  background-color: rgb(var(--color-bg-text-hover));
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}

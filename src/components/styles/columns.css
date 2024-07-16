@@ -1,0 +1,175 @@
+.col-1 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(1 / var(--col-size)));
+  max-width: calc(100% * calc(1 / var(--col-size)));
+}
+.col-2 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(2 / var(--col-size)));
+  max-width: calc(100% * calc(2 / var(--col-size)));
+}
+.col-3 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(3 / var(--col-size)));
+  max-width: calc(100% * calc(3 / var(--col-size)));
+}
+.col-4 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(4 / var(--col-size)));
+  max-width: calc(100% * calc(4 / var(--col-size)));
+}
+.col-5 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(5 / var(--col-size)));
+  max-width: calc(100% * calc(5 / var(--col-size)));
+}
+.col-6 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(6 / var(--col-size)));
+  max-width: calc(100% * calc(6 / var(--col-size)));
+}
+.col-7 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(7 / var(--col-size)));
+  max-width: calc(100% * calc(7 / var(--col-size)));
+}
+.col-8 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(8 / var(--col-size)));
+  max-width: calc(100% * calc(8 / var(--col-size)));
+}
+.col-9 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(9 / var(--col-size)));
+  max-width: calc(100% * calc(9 / var(--col-size)));
+}
+.col-10 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(10 / var(--col-size)));
+  max-width: calc(100% * calc(10 / var(--col-size)));
+}
+.col-11 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(11 / var(--col-size)));
+  max-width: calc(100% * calc(11 / var(--col-size)));
+}
+.col-12 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(12 / var(--col-size)));
+  max-width: calc(100% * calc(12 / var(--col-size)));
+}
+.col-13 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(13 / var(--col-size)));
+  max-width: calc(100% * calc(13 / var(--col-size)));
+}
+.col-14 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(14 / var(--col-size)));
+  max-width: calc(100% * calc(14 / var(--col-size)));
+}
+.col-15 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(15 / var(--col-size)));
+  max-width: calc(100% * calc(15 / var(--col-size)));
+}
+.col-16 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(16 / var(--col-size)));
+  max-width: calc(100% * calc(16 / var(--col-size)));
+}
+.col-17 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(17 / var(--col-size)));
+  max-width: calc(100% * calc(17 / var(--col-size)));
+}
+.col-18 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(18 / var(--col-size)));
+  max-width: calc(100% * calc(18 / var(--col-size)));
+}
+.col-19 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(19 / var(--col-size)));
+  max-width: calc(100% * calc(19 / var(--col-size)));
+}
+.col-20 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(20 / var(--col-size)));
+  max-width: calc(100% * calc(20 / var(--col-size)));
+}
+.col-21 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(21 / var(--col-size)));
+  max-width: calc(100% * calc(21 / var(--col-size)));
+}
+.col-22 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(22 / var(--col-size)));
+  max-width: calc(100% * calc(22 / var(--col-size)));
+}
+.col-23 {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(23 / var(--col-size)));
+  max-width: calc(100% * calc(23 / var(--col-size)));
+}
+.col-24,
+.col {
+  --display: block;
+  box-sizing: border-box;
+  display: var(--display);
+  flex: 0 0 calc(100% * calc(24 / var(--col-size)));
+  max-width: calc(100% * calc(24 / var(--col-size)));
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 0;
+  width: 100%;
+}

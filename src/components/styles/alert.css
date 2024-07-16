@@ -1,0 +1,84 @@
+.alert {
+  --alert-padding-x: 12px;
+  --alert-padding-y: 8px;
+  --alert-border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: var(--alert-padding-y) var(--alert-padding-x);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-radius: var(--alert-border-radius);
+  color: rgb(var(--color-text));
+  word-wrap: break-word;
+  position: relative;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.alert,
+.alert.alert-info {
+  background-color: rgb(var(--color-info-bg));
+  border-color: rgb(var(--color-info-border));
+}
+.alert .alert-icon {
+  /* font-size: var(--font-size);
+  line-height: var(--line-height); */
+}
+.alert .alert-icon,
+.alert.alert-info .alert-icon {
+  color: rgb(var(--color-info-text));
+}
+.alert.alert-with-description {
+  align-items: flex-start;
+}
+.alert.alert-warning {
+  background-color: rgb(var(--color-warning-bg));
+  border-color: rgb(var(--color-warning-border));
+}
+.alert.alert-warning .alert-icon {
+  color: rgb(var(--color-warning-text));
+}
+.alert.alert-success {
+  background-color: rgb(var(--color-success-bg));
+  border-color: rgb(var(--color-success-border));
+}
+.alert.alert-success .alert-icon {
+  color: rgb(var(--color-success-text));
+}
+.alert.alert-danger {
+  background-color: rgb(var(--color-danger-bg));
+  border-color: rgb(var(--color-danger-border));
+}
+.alert.alert-danger .alert-icon {
+  color: rgb(var(--color-danger-text));
+}
+.alert .alert-content {
+  flex: 1;
+  min-width: 0;
+}
+.alert .alert-icon {
+  margin-right: var(--margin-xs);
+  line-height: 0;
+}
+.alert.alert-with-description .alert-icon {
+  margin-right: var(--margin-sm);
+  font-size: calc(var(--font-size-sm) * 2);
+  line-height: 0;
+}
+.alert .alert-content .alert-message,
+.alert .alert-content .alert-description {
+  display: block;
+}
+.alert.alert-with-description .alert-content .alert-message {
+  margin-bottom: var(--margin-xs);
+}
+.alert .alert-close-btn {
+  margin-left: var(--margin-xs);
+  padding: 0;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-size-sm);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

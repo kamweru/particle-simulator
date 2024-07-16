@@ -1,0 +1,158 @@
+.input,
+.textarea {
+  --input-height: 32px;
+  --input-height-sm: 24px;
+  --input-height-lg: 40px;
+  --input-padding-block: 4px;
+  --input-padding-inline: 11px;
+  --input-padding-block-sm: 0px;
+  --input-padding-inline-sm: 7px;
+  --input-padding-block-lg: 7px;
+  --input-padding-inline-lg: 15px;
+  --input-border-radius: 6px;
+  --input-border-radius-sm: 4px;
+  --input-border-radius-lg: 8px;
+  box-sizing: border-box;
+  outline: none;
+  text-overflow: ellipsis;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 8em;
+  margin: 0;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding: var(--input-padding-block) var(--input-padding-inline);
+  height: var(--input-height);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-radius: var(--input-border-radius);
+}
+.input,
+.textarea {
+  border-color: rgb(var(--color-border));
+  background-color: rgb(var(--color-surface));
+}
+.input:placeholder-shown,
+.textarea:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: rgb(var(--color-text-disabled));
+}
+.textarea {
+  max-width: 100%;
+  height: auto;
+  min-height: var(--input-height);
+  vertical-align: bottom;
+  resize: none;
+}
+
+.input.input-sm {
+  padding: var(--input-padding-block-sm) var(--input-padding-inline-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  border-radius: var(--input-border-radius-sm);
+  height: var(--input-height-sm);
+}
+
+.input.input-lg {
+  padding: var(--input-padding-block-lg) var(--input-padding-inline-lg);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  border-radius: var(--input-border-radius-lg);
+}
+
+.input.input-icon-left {
+  background-position: left calc(var(--default-size) * 0.75) bottom 50%;
+  padding-left: calc(var(--default-size) * 2.25);
+  background-size: var(--default-size);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.input.input-icon-right {
+  background-position: right calc(var(--default-size) * 0.75) bottom 50%;
+  padding-right: calc(var(--default-size) * 2.25);
+  background-size: var(--default-size);
+  background-repeat: no-repeat;
+}
+.input.input-icon-left,
+.input.input-icon-right {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");
+}
+.input.input-outline,
+.textarea.input-outline {
+  border-color: rgb(var(--color-border));
+}
+
+.input.input-outline:hover {
+  border-color: rgb(var(--color-primary-border-hover));
+}
+
+.input.input-outline:focus,
+.input.input-outline:focus-within {
+  border-color: rgb(var(--color-primary));
+}
+
+.input.input-fill,
+.textarea.input-fill {
+  background-color: rgb(var(--gray-3));
+  border-color: transparent;
+}
+
+.input.input-fill:hover {
+  background-color: rgb(var(--gray-2));
+}
+
+.input.input-fill:focus,
+.input.input-fill:focus-within,
+.input.input-underline:focus,
+.input.input-underline:focus-within,
+.textarea.input-underline:focus,
+.textarea.input-underline:focus-within {
+  border-color: rgb(var(--color-primary));
+  background-color: rgb(var(--color-surface));
+}
+
+.input.input-borderless,
+.textarea.input-borderless {
+  border: none;
+}
+
+.input.input-underline,
+.textarea.input-underline {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: rgb(var(--color-border));
+}
+
+.input.input-invalid,
+.input.input-invalid:not(.input-disabled),
+.input-invalid,
+.input:invalid,
+.input.input-invalid::placeholder {
+  color: rgb(var(--color-danger));
+  border-color: rgb(var(--color-danger));
+}
+
+.input.input-disabled,
+.input-disabled,
+.input.input-disabled:hover,
+.input[disabled],
+.input:disabled {
+  color: rgb(var(--color-text-disabled));
+  background-color: rgb(var(--color-neutral));
+  border-color: rgb(var(--color-border));
+  box-shadow: none;
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 1;
+}

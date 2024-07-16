@@ -1,0 +1,69 @@
+.able {
+  --able-border-radius-xl: 12px;
+  --able-border-radius-lg: 8px;
+  --able-border-radius-sm: 4px;
+  --able-border-radius-xs: 2px;
+  --able-border-radius-md: 6px;
+  --able-padding-md: 16px;
+  --able-padding-xl: 24px;
+  --able-padding-lg: 20px;
+  --able-padding-sm: 8px;
+  --able-padding-xs: 4px;
+  --able-font-size-xl: 24px;
+  --able-font-size-lg: 20px;
+  --able-font-size-md: 16px;
+  --able-font-size-sm: 12px;
+  --able-font-size-xs: 10px;
+  display: inline-block;
+  border: 1px solid rgb(var(--color-border));
+  overflow: hidden;
+}
+
+.able,
+.able.able-md {
+  border-radius: var(--able-border-radius-md);
+}
+.able .able-content {
+  overflow: auto;
+  padding: var(--able-padding-md);
+  text-align: center;
+  color: rgb(var(--color-primary-text));
+  font-size: var(--able-font-size-md);
+  background-color: rgb(var(--gray-1));
+}
+.able.able-xs {
+  border-radius: var(--able-border-radius-xs);
+}
+.able.able-xs .able-content {
+  padding: var(--able-padding-xs);
+  font-size: var(--able-font-size-xs);
+}
+.able.able-sm {
+  border-radius: var(--able-border-radius-sm);
+}
+.able.able-sm .able-content {
+  padding: var(--able-padding-sm);
+  font-size: var(--able-font-size-sm);
+}
+.able.able-lg {
+  border-radius: var(--able-border-radius-lg);
+}
+.able.able-lg .able-content {
+  padding: var(--able-padding-lg);
+  font-size: var(--able-font-size-lg);
+}
+.able.able-xl {
+  border-radius: var(--able-border-radius-xl);
+}
+.able.able-xl .able-content {
+  padding: var(--able-padding-xl);
+  font-size: var(--able-font-size-xl);
+}
+.able.able-vertical .able-content {
+  display: flex;
+  flex-direction: column;
+}
+.able.able-horizontal .able-content {
+  display: flex;
+  flex-direction: row;
+}

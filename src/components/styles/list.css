@@ -1,0 +1,52 @@
+.list {
+  --list-border-radius: 8px;
+  --list-border-radius-sm: 4px;
+  --list-border-radius-lg: 16px;
+  --list-padding-inline: 20px;
+  --list-padding-block: 12px;
+  --list-padding-inline-sm: 12px;
+  --list-padding-block-sm: 7px;
+  --list-padding-inline-lg: 24px;
+  --list-padding-block-lg: 16px;
+  background-color: rgb(var(--color-surface));
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: rgb(var(--color-border));
+  border-radius: var(--list-border-radius);
+}
+.list.list-sm {
+  border-radius: var(--list-border-radius-sm);
+}
+.list.list-lg {
+  border-radius: var(--list-border-radius-lg);
+}
+.list .list-header,
+.list .list-footer {
+  padding: var(--list-padding-block) var(--list-padding-inline);
+}
+.list.list-sm .list-header,
+.list.list-sm .list-footer {
+  padding: var(--list-padding-block-sm) var(--list-padding-inline-sm);
+}
+.list.list-lg .list-header,
+.list.list-lg .list-footer {
+  padding: var(--list-padding-block-lg) var(--list-padding-inline-lg);
+}
+.list .list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list .list-header,
+.list .list-item {
+  border-bottom: 1px solid rgb(var(--color-border));
+}
+.list .list-items .list-item {
+  padding: var(--list-padding-block) var(--list-padding-inline);
+}
+.list.list-sm .list-items .list-item {
+  padding: var(--list-padding-block-sm) var(--list-padding-inline-sm);
+}
+.list.list-lg .list-items .list-item {
+  padding: var(--list-padding-block-lg) var(--list-padding-inline-lg);
+}

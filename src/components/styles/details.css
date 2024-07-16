@@ -1,0 +1,100 @@
+.details {
+  --details-border-radius: 6px;
+  --details-border-radius-sm: 4px;
+  --details-border-radius-lg: 8px;
+  --details-padding-inline: 15px;
+  --details-padding-block: 4px;
+  --details-padding-inline-sm: 7px;
+  --details-padding-block-sm: 0;
+  --details-padding-inline-lg: 15px;
+  --details-padding-block-lg: 7px;
+  --details-min-height: 32px;
+  --details-min-height-sm: 24px;
+  --details-min-height-lg: 40px;
+  --details-marker-width: 12px;
+  display: block;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: rgb(var(--color-border));
+  border-radius: var(--details-border-radius);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.details > .summary {
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  min-height: var(--details-min-height);
+  padding: var(--details-padding-block) var(--details-padding-inline);
+  border-bottom: transparent;
+  margin-bottom: 0;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.details.details-sm {
+  border-radius: var(--details-border-radius-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+.details.details-sm > .summary {
+  min-height: var(--details-min-height-sm);
+  padding: var(--details-padding-block-sm) var(--details-padding-inline-sm);
+}
+.details.details-lg {
+  border-radius: var(--details-border-radius-lg);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+.details.details-lg > .summary {
+  min-height: var(--details-min-height-lg);
+  padding: var(--details-padding-block-lg) var(--details-padding-inline-lg);
+}
+.details .content {
+  padding: var(--details-padding-block) var(--details-padding-inline);
+}
+.details.details-sm .content {
+  padding: var(--details-padding-block-sm) var(--details-padding-inline-sm);
+}
+.details.details-lg .content {
+  padding: var(--details-padding-block-lg) var(--details-padding-inline-lg);
+}
+.details > .summary::after,
+.details > .summary::before {
+  content: "";
+  position: absolute;
+  right: var(--details-padding-inline);
+  top: calc(50%);
+  transform: translateY(-50%);
+  width: var(--details-marker-width);
+  height: 0;
+  border-bottom: var(--border-width) var(--border-style) rgb(var(--color-text));
+}
+.details.details-sm > .summary::after,
+.details.details-sm > .summary::before {
+  right: var(--details-padding-inline-sm);
+}
+.details.details-lg > .summary::after,
+.details.details-lg > .summary::before {
+  right: var(--details-padding-inline-lg);
+}
+
+.details > .summary::after {
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: 50% 50%;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.details > .summary::marker {
+  content: none;
+}
+.details[open] {
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.details[open] > .summary {
+  margin-bottom: 4px;
+  border-bottom: var(--border-width) var(--border-style)
+    rgb(var(--color-border));
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.details[open] > .summary::after {
+  transform: rotate(0) translateY(-50%);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}

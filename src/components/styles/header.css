@@ -1,0 +1,21 @@
+.header {
+  --header-height: 64px;
+  --header-height-sm: 56px;
+  --header-height-lg: 80px;
+  --header-padding-inline: 24px;
+  --header-padding-inline-sm: 16px;
+  --header-padding-inline-lg: 32px;
+  --header-padding-block: 8px;
+  --header-padding-block-sm: 0px;
+  --header-padding-block-lg: 16px;
+  height: var(--header-height);
+  display: flex;
+}
+.header,
+.header.header-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+.header.header-vertical {
+  flex-direction: column;
+}

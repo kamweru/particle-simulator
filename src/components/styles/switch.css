@@ -1,0 +1,92 @@
+.switch {
+  --switch-width: 40px;
+  --switch-height: 22px;
+  --switch-width-sm: 28px;
+  --switch-height-sm: 16px;
+  --switch-handle-size: 18px;
+  --switch-handle-size-sm: 12px;
+  --switch-handle-offset: 2px;
+  --switch-handle-offset-sm: 1px;
+  --switch-handle-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: rgb(var(--color-border));
+  min-width: var(--switch-width);
+  height: var(--switch-height);
+  border-radius: var(--switch-height);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.switch,
+.switch.switch-sm {
+  border-color: transparent;
+  background-color: rgb(var(--gray-3));
+  position: relative;
+}
+
+.switch::after,
+.switch.switch-sm::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: rgb(var(--color-surface));
+  box-shadow: var(--switch-handle-shadow);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.switch::after {
+  height: var(--switch-handle-size);
+  width: var(--switch-handle-size);
+  left: var(--switch-handle-offset);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.switch:checked,
+.switch.switch-checked,
+.switch.switch-sm:checked {
+  background: none;
+  background-position: 0 0;
+  background-color: rgb(var(--color-primary));
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.switch:checked::after {
+  transform: translateY(-50%)
+    translateX(
+      calc(var(--switch-handle-size) - calc(var(--switch-handle-offset) / 2))
+    );
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.switch.switch-sm {
+  min-width: var(--switch-width-sm);
+  height: var(--switch-height-sm);
+  border-radius: var(--switch-height-sm);
+}
+
+.switch.switch-sm::after {
+  height: var(--switch-handle-size-sm);
+  width: var(--switch-handle-size-sm);
+  left: var(--switch-handle-offset-sm);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.switch.switch-sm:checked::after {
+  transform: translateY(-50%)
+    translateX(
+      calc(
+        var(--switch-handle-size-sm) -
+          calc(var(--switch-handle-offset-sm) * 0.5)
+      )
+    );
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}

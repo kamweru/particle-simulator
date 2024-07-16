@@ -1,0 +1,78 @@
+.form {
+  --form-label-height: calc(var(--default-size) * 2);
+  --form-control-margin-bottom: calc(var(--default-size) * 1.5);
+  --form-horizontal-label-margin-right: calc(var(--default-size) * 0.5);
+  --form-horizontal-control-group-margin-right: calc(var(--default-size) * 1.5);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  list-style: none;
+}
+.form .form-control-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--form-control-margin-bottom);
+}
+.form.form-horizontal .form-control-group {
+  flex-direction: row;
+}
+.form.form-vertical .form-control-group {
+  flex-direction: column;
+}
+.form.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form.form-inline .form-control-group {
+  /* flex: 1 1 auto; */
+  margin-right: var(--form-horizontal-control-group-margin-right);
+}
+.form .form-control-group .form-label {
+  flex-grow: 0;
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-align: end;
+  vertical-align: middle; */
+  overflow: unset;
+  line-height: var(--line-height);
+  /* white-space: unset; */
+}
+.form .form-control-group .form-label > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  height: var(--form-label-height);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.form.form-horizontal .form-control-group .form-label > label,
+.form.form-inline .form-control-group .form-label > label {
+  margin-right: var(--form-horizontal-label-margin-right);
+}
+.form.form-vertical .form-control-group .form-label > label {
+  height: auto;
+  margin: 0;
+}
+.form .form-control-group .form-control {
+  /* border: 1px solid rgb(var(--color-danger)); */
+  width: 100%;
+  /* flex: 1 1 auto; */
+}
+.form .form-control-group .form-control-message {
+  display: flex;
+  flex-wrap: nowrap;
+  color: rgb(var(--color-invert-9));
+}
+.form .form-control-group .form-control-message.form-control-error {
+  color: rgb(var(--color-danger));
+}
+.form .form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: calc(var(--default-size) * 0.5);
+}

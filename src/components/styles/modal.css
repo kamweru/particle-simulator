@@ -1,0 +1,101 @@
+.modal {
+  --modal-border-radius: 6px;
+  --modal-close-button-padding: 3px;
+  --modal-close-button-border-radius: 5px;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  z-index: 9999;
+  transform: scale(0, 0);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.modal.open {
+  pointer-events: auto;
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.modal .modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  padding: 48px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.modal .modal-inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+.modal .modal-dialog {
+  position: relative;
+  min-width: 320px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  background: rgb(var(--color-surface));
+  border-radius: var(--modal-border-radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.modal .modal-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  /* font-size: 20px;
+  line-height: 1;
+  color: rgb(var(--color-text));
+  border-radius: var(--modal-close-button-border-radius);
+  padding: var(--modal-close-button-padding); */
+  display: inline-flex;
+  align-items: center;
+  z-index: 1;
+}
+/* .modal .modal-close-btn:hover {
+  cursor: pointer;
+  background-color: rgb(var(--color-bg-text-hover));
+} */
+
+/** Overlay */
+.modal .modal-overlay {
+  /* pointer-events: none; */
+  /* opacity: 0; */
+  /* transition: opacity 0.3s; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.modal .modal-header {
+  margin-bottom: calc(var(--default-size) * 0.5);
+}
+.modal .modal-title {
+  word-wrap: break-word;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  color: rgb(var(--color-text));
+  font-weight: var(--font-weight-bold);
+}
+.modal .modal-body {
+  word-wrap: break-word;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: rgb(var(--color-text));
+}
+.modal .modal-footer {
+  text-align: end;
+  margin-top: calc(var(--default-size) * 0.5);
+}
+.modal .modal-footer .btn:last-child {
+  margin-left: calc(var(--default-size) * 0.5);
+}

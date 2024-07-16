@@ -1,0 +1,137 @@
+.numberinput {
+  --numberinput-handler-wrap-width: 22px;
+  --numberinput-button-arrow-size: 5px;
+  --numberinput-height: 32px;
+  --numberinput-height-sm: 24px;
+  --numberinput-height-lg: 40px;
+  --numberinput-border-radius: 6px;
+  --numberinput-border-radius-sm: 4px;
+  --numberinput-border-radius-lg: 8px;
+  --numberinput-padding-inline: 11px;
+  --numberinput-padding-block: 4px;
+  --numberinput-padding-inline-sm: 7px;
+  --numberinput-padding-block-sm: 0px;
+  --numberinput-padding-inline-lg: 15px;
+  --numberinput-padding-block-lg: 7px;
+  position: relative;
+}
+.numberinput-input[type="number"] {
+  box-sizing: border-box;
+  outline: none;
+  text-overflow: ellipsis;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  appearance: textfield;
+  --moz-appearance: textfield;
+}
+.numberinput-input::-webkit-outer-spin-button,
+.numberinput-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.numberinput .numberinput-input,
+.numberinput.numberinput-outline .numberinput-input {
+  border-color: rgb(var(--color-border));
+  border-radius: var(--numberinput-border-radius);
+  padding: var(--numberinput-padding-block) var(--numberinput-padding-inline);
+  height: var(--numberinput-height);
+}
+.numberinput.numberinput-fill .numberinput-input {
+  background-color: rgb(var(--gray-2));
+  border-color: transparent;
+}
+.numberinput.numberinput-sm .numberinput-input {
+  height: var(--numberinput-height-sm);
+  padding: var(--numberinput-padding-block-sm)
+    var(--numberinput-padding-inline-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  border-radius: var(--numberinput-border-radius-sm);
+}
+
+.numberinput.numberinput-lg .numberinput-input {
+  height: var(--numberinput-height-lg);
+  padding: var(--numberinput-padding-block-lg)
+    var(--numberinput-padding-inline-lg);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  border-radius: var(--numberinput-border-radius-lg);
+}
+
+.numberinput .numberinput-handler-wrap {
+  position: absolute;
+  width: var(--numberinput-handler-wrap-width);
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+.numberinput:hover .numberinput-handler-wrap {
+  opacity: 1;
+}
+
+.numberinput .numberinput-handler-wrap .numberinput-handler {
+  border-left: var(--border-width) var(--border-style) rgb(var(--color-border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  overflow: hidden;
+  font-weight: bold;
+  line-height: 0;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.numberinput
+  .numberinput-handler-wrap
+  .numberinput-handler.numberinput-handler-down {
+  border-top: var(--border-width) var(--border-style) rgb(var(--color-border));
+}
+
+.numberinput
+  .numberinput-handler-wrap
+  .numberinput-handler
+  .numberinput-handler-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: var(--numberinput-button-arrow-size) var(--border-style) transparent;
+}
+
+.numberinput
+  .numberinput-handler-wrap
+  .numberinput-handler
+  .numberinput-handler-icon.numberinput-handler-icon-up {
+  border-bottom: var(--numberinput-button-arrow-size) var(--border-style)
+    rgb(var(--color-border));
+  border-top: 0;
+}
+
+.numberinput
+  .numberinput-handler-wrap
+  .numberinput-handler
+  .numberinput-handler-icon.numberinput-handler-icon-down {
+  border-top: var(--numberinput-button-arrow-size) var(--border-style)
+    rgb(var(--color-border));
+  border-bottom: 0;
+}

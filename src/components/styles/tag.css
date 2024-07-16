@@ -1,0 +1,52 @@
+.tag {
+  --tag-margin-inline: 8px;
+  --tag-default-bg: rgb(var(--color-surface));
+  --tag-default-color: rgb(var(--color-text));
+  --tag-default-border: rgb(var(--color-border));
+  --tag-default-border-color: rgb(var(--color-border));
+  --tag-default-hover-bg: rgb(var(--color-surface-hover));
+  --tag-default-hover-color: rgb(var(--color-text-hover));
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--color-text));
+  font-size: var(--font-size-sm);
+  line-height: calc(var(--line-height-sm) * var(--font-size-sm));
+  list-style: none;
+  /* font-family: var(--ant-font-family); */
+  display: inline-block;
+  height: auto;
+  margin-inline-end: var(--tag-margin-inline);
+  padding-inline: calc(8px - var(--border-width));
+  white-space: nowrap;
+  background: var(--tag-default-bg);
+  border: var(--border-width) var(--border-style) rgb(var(--color-border));
+  border-radius: var(--border-radius-sm);
+  opacity: 1;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  text-align: start;
+  position: relative;
+}
+.tag .tag-close-btn {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-size-sm);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-inline-start: calc(var(--padding-xxs) - var(--border-width));
+  font-size: calc(var(--font-size-sm) - var(--border-width) * 2);
+  color: rgb(var(--color-invert-8));
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+.tag .tag-close-btn:hover {
+  color: rgb(var(--color-text));
+}
+
+.tag > .icon + span,
+.tag > span + .icon {
+  margin-inline-start: calc(var(--padding-xxs) - var(--border-width));
+}

@@ -1,0 +1,31 @@
+.popconfirm {
+  --popconfirm-padding: 16px;
+  --popconfirm-icon-size: 20px;
+  --popconfirm-margin-inline: 8px;
+  --popconfirm-margin-block: 8px;
+  position: relative;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: rgb(var(--color-text));
+}
+.popconfirm .popconfirm-inner {
+  display: flex;
+  align-items: self-start;
+  padding: var(--popconfirm-padding);
+  word-wrap: break-word;
+}
+.popconfirm .popconfirm-icon {
+  margin-inline-end: var(--popconfirm-margin-inline);
+  font-size: var(--popconfirm-icon-size);
+  line-height: 1;
+  color: rgb(var(--color-danger-text));
+}
+
+.popconfirm .popconfirm-content .popconfirm-actions {
+  text-align: end;
+  margin-top: var(--popconfirm-margin-block);
+}
+
+.popconfirm .popconfirm-content .popconfirm-actions > button:last-child {
+  margin-left: var(--popconfirm-margin-inline);
+}

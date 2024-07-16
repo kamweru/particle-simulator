@@ -1,0 +1,85 @@
+.card {
+  --card-head-bg: transparent;
+  --card-head-height: 56px;
+  --card-head-height-sm: 38px;
+  --card-padding: 16px;
+  --card-padding-sm: 12px;
+  --card-border-radius: 8px;
+  --card-bg: var(--color-surface);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--color-text));
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  list-style: none;
+  font-family: var(--font-family);
+  position: relative;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: rgb(var(--color-border));
+  border-radius: var(--card-border-radius);
+  background-color: rgb(var(--card-bg));
+  padding: 0;
+  margin: 0;
+}
+.card.card-no-bg {
+  --card-head-bg: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+}
+.card.card.card-no-bg .card-head {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+}
+.card .card-head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: var(--card-head-height);
+  padding: 0 var(--card-padding);
+  position: relative;
+  border-bottom: 1px solid rgb(var(--color-border));
+  background-color: var(--card-head-bg);
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+}
+.card.card-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+.card.card-sm .card-head {
+  min-height: var(--card-head-height-sm);
+  padding: 0 var(--card-padding-sm);
+}
+
+.card .card-head .card-head-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.card .card-head .card-head-content .card-head-extra {
+  margin-left: auto;
+}
+
+.card .card-body {
+  padding: var(--card-padding);
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+.card .card-footer {
+  border-top: 1px solid rgb(var(--color-border));
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+.card.card-sm .card-body,
+.card.card-sm .card-footer {
+  padding: var(--card-padding-sm);
+}
+.card .card-footer .card-footer-content {
+  text-align: end;
+}

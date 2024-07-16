@@ -1,0 +1,22 @@
+progress.progress {
+  --progress-height: 8px;
+  --progress-border-radius: 16px;
+  --progress-value-border-radius: 16px;
+  width: 100%;
+  height: var(--progress-height);
+  border-radius: var(--progress-border-radius);
+  background-color: rgb(var(--gray-5));
+  overflow: hidden;
+}
+progress.progress::-webkit-progress-bar {
+  background-color: rgb(var(--gray-5));
+  border-radius: var(--progress-border-radius);
+}
+progress.progress::-webkit-progress-value {
+  background-color: rgb(var(--color-primary));
+  border-radius: var(--progress-value-border-radius);
+}
+progress.progress::-moz-progress-bar {
+  background-color: rgb(var(--gray-5));
+  border-radius: var(--progress-border-radius);
+}

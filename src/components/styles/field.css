@@ -1,0 +1,80 @@
+.field {
+  --field-border-radius: 8px;
+  --field-border-radius-sm: 4px;
+  --field-border-radius-lg: 12px;
+  --field-padding-inline: 8px;
+  --field-padding-inline-sm: 4px;
+  --field-padding-inline-lg: 12px;
+  --field-padding-block: 8px;
+  --field-padding-block-sm: 4px;
+  --field-padding-block-lg: 12px;
+  --field-margin-inline: 8px;
+  --field-margin-inline-sm: 4px;
+  --field-margin-inline-lg: 12px;
+  --field-margin-block: 8px;
+  --field-margin-block-sm: 4px;
+  --field-margin-block-lg: 12px;
+  --field-height: 32px;
+  --field-height-sm: 24px;
+  --field-height-lg: 40px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  /* background-color: aqua; */
+  text-align: start;
+  /* width: auto; */
+  /* min-width: 0; */
+  width: 100%;
+  /* flex-grow: 1; */
+  /* border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: rgb(var(--color-border)); */
+}
+.field,
+.field.field-vertical {
+  display: inline-flex;
+  flex-direction: column;
+}
+.field .field-label {
+  margin: 0;
+}
+.field .field-label,
+.field.field-vertical .field-label {
+  flex-grow: 0;
+  /* margin-bottom: var(--field-margin-block); */
+}
+.field .field-label > label,
+.field.field-vertical .field-label > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  height: var(--field-height);
+}
+.field.field-horizontal {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: row wrap;
+  min-width: 0;
+  gap: var(--field-margin-inline);
+}
+.field.field-horizontal .field-label {
+  min-width: 0;
+  height: auto;
+  margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: end;
+  vertical-align: middle;
+  margin-right: var(--field-margin-inline);
+}
+.field.field-horizontal .field-input {
+  flex: 1 1 0;
+  min-width: 0;
+}
+/* .field .field-label {
+  flex: 0 0 auto;
+  display: inline-block;
+}
+.field .field-input {
+  flex: 1 1 auto;
+} */

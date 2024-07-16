@@ -1,0 +1,66 @@
+.badge {
+  --badge-content-height: 40px;
+  --badge-count-height: 20px;
+  --badge-count-height-sm: 16px;
+  --badge-count-border-radius: 12px;
+  --badge-count-border-radius-sm: 8px;
+  --badge-dot-height: 8px;
+  position: relative;
+  display: inline-block;
+}
+.badge .badge-count {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+.badge .badge-content {
+  height: var(--badge-content-height);
+  width: var(--badge-content-height);
+  border: 1px solid rgb(var(--color-border));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(var(--default-size) * 0.5);
+  background-color: rgb(var(--gray-3));
+}
+.badge .badge-content.badge-with-text {
+  width: auto;
+  border: none;
+  background-color: transparent;
+  height: auto;
+}
+
+.badge .badge-content.badge-with-text + .badge-count {
+  /* transform: translate(60%, -60%); */
+}
+.badge .badge-count,
+.badge .badge-count.badge-count-md {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--badge-count-border-radius);
+  min-width: var(--badge-count-height);
+  height: var(--badge-count-height);
+  padding: 0 4px;
+  background-color: rgb(var(--color-danger));
+  box-shadow: inset 0 0 0 calc(var(--default-size) * 0.0625)
+    rgb(var(--color-white));
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(var(--color-white));
+}
+.badge .badge-count.badge-count-sm {
+  border-radius: var(--badge-count-border-radius);
+  min-width: var(--badge-count-height-sm);
+  height: var(--badge-count-height-sm);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+.badge .badge-count.badge-dot {
+  border-radius: 50%;
+  min-width: var(--badge-dot-height);
+  height: var(--badge-dot-height);
+}
