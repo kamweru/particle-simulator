@@ -1,5 +1,5 @@
 <script>
-  import Icon from "@iconify/svelte";
+  // import Icon from "@iconify/svelte";
   export let buttonText = "button text";
   export let cssVariables = "";
   export let type = "default";
@@ -66,16 +66,18 @@
     .replace(/\s+/g, " ")}
   style={cssVariables}
   {disabled}
+  on:click
+  {...$$restProps}
 >
   {#if buttonContent === "iconOnly"}
-    <span class="button-icon"><Icon icon="tabler:check"></Icon></span>
+    <span class="button-icon"><span class="icon"><slot></slot></span></span>
   {:else if buttonContent === "iconLeft"}
-    <span class="button-icon"><Icon icon="tabler:check"></Icon></span>
+    <span class="button-icon"><span class="icon"><slot></slot></span></span>
     <span> {buttonText}</span>
   {:else if buttonContent === "iconRight"}
     <span> {buttonText}</span>
-    <span class="button-icon"><Icon icon="tabler:check"></Icon></span>
+    <span class="button-icon"><span class="icon"><slot></slot></span></span>
   {:else}
-    {buttonText}
+    <span>{buttonText}</span>
   {/if}
 </button>

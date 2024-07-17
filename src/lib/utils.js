@@ -25,5 +25,7 @@ export let uuid = (n = 20) => {
 export const getRandomFromRange = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 export const getRandomFloat = () => {
-  return (Math.random() * 2 - 1).toFixed(3);
+  return parseFloat((Math.random() * 2 - 1).toFixed(3));
 };
+export const range = (start, stop, step = 1) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
