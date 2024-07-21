@@ -62,3 +62,8 @@ https://codepen.io/seanfree/pen/bRoqGL
 
 https://scribbler.live/2024/04/22/Implementing-Genetic-Algorithms-in-JavaScript.html
 https://www.codeproject.com/articles/1127321/genetic-algorithm-an-implementation-using-javascri
+
+
+https://natureofcode.com/particles/#particle-systems-with-forces
+https://craftyjs.com/getting-started/
+https://happycoding.io/tutorials/processing/collision-detection

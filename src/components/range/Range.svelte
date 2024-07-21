@@ -1,6 +1,9 @@
 <script>
   import "../styles/range.css";
-  export let value = 30;
+  export let value = 0,
+    min = 0,
+    max = 100,
+    step = 1;
   export let size = "default";
   export let cssVariables = "";
   let classes = {
@@ -15,9 +18,9 @@
 
 <input
   type="range"
-  min="0"
-  max="100"
-  step="4"
+  {min}
+  {max}
+  {step}
   bind:value
   class={[classes.default, classes.sizes[size]]
     .join(" ")
